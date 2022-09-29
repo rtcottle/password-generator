@@ -26,34 +26,34 @@ generateBtn.addEventListener("click", writePassword);
 // 6. randomize characters
 // 7. make sure each character type is present
 
+// TODO: define password length (n) and how each var works inside the password variable. 
 
 function generatePassword() {
-  prompt("How many characters would you like your password to contain?", "Please choose from 8-128 characters");
-    // if (generatePassword === typeof Number(< 8 || > 128)) {
-    //   alert("false");
+  var entry = prompt("How many characters would you like your password to contain?", "Please choose from 8-128 characters");
+    if (entry < 8){
+      alert("Must be more 7 characters");
+      return;
+    }
+    if (entry > 128){
+      alert("Must be less than 129 characters");
+      return;
+    }
+    // TODO: fix this statement
+    // if (entry != Number){
+    //   alert("Must enter a number between 8-128");
+    //   return;
     // }
-    confirm("Do you want UPPER-CASE letters?")
-      // if (confirm == true) {
-        
-      // }
-    confirm("Do you want lower-case letters?")
-      // if (confirm == true) {
-        
-      // }
-    confirm("Do you want numbers?")
-      // if (confirm == true) {
-        
-      // }
-    confirm("Do you want special characters?")
-      // if (confirm == true) {
-        
-      // }
-}
+    var upper = confirm("Click OKAY if you want UPPER-CASE letters. Click CANCEL if you do not.")
+    if (upper = false){
+    }
+
+    var lower = confirm("Click OKAY if you want lower-case letters. Click CANCEL if you do not.")
+
+    var numbers = confirm("Click OKAY if you want numbers. Click CANCEL if you do not.")
+
+    var special = confirm("Click OKAY if you want special characters. Click CANCEL if you do not.")
 
 
 
 
-
-// if (generatePassword == true) {
-//   alert("Would you like to have Upper-case letters in your password");
-// }
+  }    
