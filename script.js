@@ -17,6 +17,7 @@ generateBtn.addEventListener("click", writePassword);
 // TODO: Psuedocode: 
 
 // 1. need a prompt for length of password (between 8-128 characters)
+// restrict to only numbers 
 // If not between 8-128, return false. 
 // 2. ask about CAPITAL LETTERS true/false
 // 3. ask about lower case letters
@@ -31,7 +32,27 @@ function generatePassword() {
     // if (generatePassword === typeof Number(< 8 || > 128)) {
     //   alert("false");
     // }
+    confirm("Do you want UPPER-CASE letters?")
+      // if (confirm == true) {
+        
+      // }
+    confirm("Do you want lower-case letters?")
+      // if (confirm == true) {
+        
+      // }
+    confirm("Do you want numbers?")
+      // if (confirm == true) {
+        
+      // }
+    confirm("Do you want special characters?")
+      // if (confirm == true) {
+        
+      // }
 }
+
+
+
+
 
 // if (generatePassword == true) {
 //   alert("Would you like to have Upper-case letters in your password");
