@@ -36,6 +36,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 ## Credits
 
 README guide: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
+How to randomly choose an array item: https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php 
+
 
 ## License
 
