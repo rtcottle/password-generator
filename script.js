@@ -47,11 +47,10 @@ function generatePassword() {
   // var pattern = entry * [upper, lower, number, special];
   var entry = prompt("How many characters would you like your password to contain?", "Please choose from 8-128 characters");
     var passwordLength = Number(entry);
-    // TODO: get this to Work 
-    // if (Number = isNaN) {
-    //   alert("Not a number");
-    //   return;
-    // }
+    if (isNaN(entry)) {
+      alert("Not a number");
+      return;
+    }
     if (entry < 8){
       alert("Must be more 7 characters");
       return;
@@ -60,53 +59,51 @@ function generatePassword() {
       alert("Must be less than 129 characters");
       return;
     };
-  //check if it is NaN
+    // TODO: fix this when a user hits "cancel" 
+    if (entry = false){
+      alert("Must be a number between 8-128")
+      return;
+    }
+
+  // This is the button in regards to upper-case. This also defines the parameters. 
   var upper = confirm("Click OK if you want UPPER-CASE letters. Click CANCEL if you do not.");
-  var lower = confirm("Click OK if you want lower-case letters. Click CANCEL if you do not.");
-  var number = confirm("Click OK if you want numbers. Click CANCEL if you do not.");
-  var special = confirm("Click OK if you want special characters. Click CANCEL if you do not.");
-
-
-  // TODO: fix if someone selects 'cancel' from the prompt box   
-    // if (entry = true){
-    //   alert("Please enter a number between 8-128")
-    //   return;
-    // }
-    
-    console.log(entry)
-    // TODO: fix this statement
-    // if (typeof entry != Number){
-    //   alert("Must enter a number between 8-128");
-    //   return;
-    // }
-    // This is the button in regards to upper-case. This also defines the parameters. 
-    console.log(upper)
-      // if (upper = true){
-      //   //include in password options
-      // };
-      // if (upper = false){
-      //   //exclude from password options
-      // }
+  // if (upper = true){
+  //   //include in password options
+  // };
+  // if (upper = false){
+  //   //exclude from password options
+  // };
 
     // This is the button in regards to lower-case. This also defines the parameters. 
-    console.log(lower)
-      // if (lower = true){
+  var lower = confirm("Click OK if you want lower-case letters. Click CANCEL if you do not.");
+  // if (lower = true){
 
-      // };
-    // This is the button in regards to numbers. This also defines the parameters.
-    console.log(number)
+  // };
 
-      // if (number = true) {
-      //   return numbers[Math.floor(Math.random()*numbers.length)];
+  // This is the button in regards to numbers. This also defines the parameters.
+  var number = confirm("Click OK if you want numbers. Click CANCEL if you do not.");
+  // if (number = true) {
+  //   return numbers[Math.floor(Math.random()*numbers.length)];
 
-      // };
-    // This is the button in regards to special characters. This also defines the parameters. 
-    console.log(special)
+  // };
 
-      // if (special = true){
+  // This is the button in regards to special characters. This also defines the parameters. 
+  var special = confirm("Click OK if you want special characters. Click CANCEL if you do not.");
+  // if (special = true){
 
-      // };
-
+  // };
+    
+  // TODO: get this to work 
+  if ([upper, lower, number, special] = false){
+    alert("Must select at least one character type!")
+    return;
+  }
+    console.log(entry);
+    console.log(upper);
+    console.log(lower);
+    console.log(number);
+    console.log(special);
+  
       // for (var i = 0; i < entry; i++) {  
       //   return (pattern); 
       // };
@@ -118,4 +115,4 @@ function generatePassword() {
   // }    
 
 // function displayPassword(entry){
-}
+};
