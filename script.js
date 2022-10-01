@@ -41,16 +41,22 @@ generateBtn.addEventListener("click", writePassword);
 
 function generatePassword() {
   var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J' ,'K' ,'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+  var ranUpCa = upperCase[Math.floor(Math.random() * upperCase.length)] //randomize above var
   var lowerCase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+  var ranLoCa = lowerCase[Math.floor(Math.random() * lowerCase.length)] //randomize above var
   var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var ranNuCa = numbers[Math.floor(Math.random() * numbers.length)] //randomize above var
   var specialCharacters = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '.', ',', '<', '>', '?', ';', ':', '~',];
+  var ranSpCh = specialCharacters[Math.floor(Math.random() * specialCharacters.length)] //randomize above var
+  // var random = this[Math.floor(Math.random() * this.length)];
   // var pattern = entry * [upper, lower, number, special];
-  var entry = prompt("How many characters would you like your password to contain?", "Please choose from 8-128 characters");
-    var passwordLength = Number(entry);
-    if (isNaN(entry)) {
-      alert("Not a number");
-      return;
-    }
+  var entry = Number(prompt("How many characters would you like your password to contain?", "Please choose from 8-128 characters"));
+    // var passwordLength = Number(entry);
+    // TODO: fix this rule!! 
+    // if (isNaN(entry)) {
+    //   alert("Not a number");
+    //   return;
+    // }
     if (entry < 8){
       alert("Must be more 7 characters");
       return;
@@ -67,43 +73,28 @@ function generatePassword() {
 
   // This is the button in regards to upper-case. This also defines the parameters. 
   var upper = confirm("Click OK if you want UPPER-CASE letters. Click CANCEL if you do not.");
-  // if (upper = true){
-  //   //include in password options
-  // };
-  // if (upper = false){
-  //   //exclude from password options
-  // };
-
+  
     // This is the button in regards to lower-case. This also defines the parameters. 
   var lower = confirm("Click OK if you want lower-case letters. Click CANCEL if you do not.");
-  // if (lower = true){
-
-  // };
 
   // This is the button in regards to numbers. This also defines the parameters.
   var number = confirm("Click OK if you want numbers. Click CANCEL if you do not.");
-  // if (number = true) {
-  //   return numbers[Math.floor(Math.random()*numbers.length)];
-
-  // };
 
   // This is the button in regards to special characters. This also defines the parameters. 
   var special = confirm("Click OK if you want special characters. Click CANCEL if you do not.");
-  // if (special = true){
 
-  // };
-    
-  // TODO: get this to work 
-  if ([upper, lower, number, special] = false){
-    alert("Must select at least one character type!")
-    return;
-  }
-    console.log(entry);
+    if (upper && lower && number && special === false){
+      alert("You must select a character type")
+      return;
+    }
+ 
+    console.log(Number(entry));
     console.log(upper);
     console.log(lower);
     console.log(number);
     console.log(special);
-  
+    console.log(typeof Number(entry))
+    
       // for (var i = 0; i < entry; i++) {  
       //   return (pattern); 
       // };
@@ -113,6 +104,30 @@ function generatePassword() {
     // TODO: make a function that displays the password 
   // displayPassword()
   // }    
+function random (ranUpCa, ranLoCa, ranNuCa, ranSpCh){
+  if (upper = true){
+    for (var i = 0; i < ranUpCa.length; i++) {
+    var ranUpCa = array[i];
+  }
+} 
+  if (lower = true){
+    for (var i = 0; i < ranLoCa.length; i++) {
+    var ranLoCa = array[i];
+  }
+}
+  if (number = true){
+    for (var i = 0; i < ranNuCa.length; i++) {
+    var ranNuCa = array[i];
+  }
+}
+  if (special = true){
+    for (var i = 0; i < ranSpCh.length; i++) {
+    var ranSpCh = array[i];
+  }
+}
+}
+
 
 // function displayPassword(entry){
+  return (random());
 };
