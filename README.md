@@ -35,10 +35,6 @@ Licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yel
 
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
-## Features
-
-If your project has a lot of features, list them here.
-
 ## Tests
 
 Test this out, hit the generate password button and select your preferred criteria!
