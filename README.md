@@ -17,7 +17,7 @@ N/A
 
 This can be used to generate a random password!
 
-link:
+link: https://rtcottle.github.io/password-generator/
 
 ![screenshot](screenshot.png)
 
