@@ -1,63 +1,44 @@
 # Password-Generator
+
 This application generates a random password with selected criteria.
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+This is my first JavaScript project. It's purpose is to get a firm understanding of JavaScript.
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- I learned that JavaScript is a very interactive language.
+- JavaScript has a lot of options for interactivity and output.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+N/A
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+This can be used to generate a random password!
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+link:
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![screenshot](screenshot.png)
 
 ## Credits
 
 README guide: https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
-How to randomly choose an array item: https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php 
+How to randomly choose an array item: https://www.w3resource.com/javascript-exercises/javascript-array-exercise-35.php
 Randomization reference: https://stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
-
 
 ## License
 
-Licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) license. 
+Licensed under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE) license.
 
 ## Badges
 
 ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
 
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
 ## Features
 
 If your project has a lot of features, list them here.
 
-## How to Contribute
-
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-
 ## Tests
 
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Test this out, hit the generate password button and select your preferred criteria!
