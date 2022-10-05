@@ -65,7 +65,7 @@ var UPPER_CASES = [
   "Z",
 ];
 var randomUpperCase =
-  UPPER_CASES[Math.floor(Math.random() * UPPER_CASES.length)]; //randomize above var
+  UPPER_CASES[Math.floor(Math.random() * UPPER_CASES.length - 1)]; //randomize above var
 var LOWER_CASES = [
   "a",
   "b",
@@ -151,6 +151,8 @@ function generatePassword() {
   var upper = confirm(
     "Click OK if you want UPPER-CASE letters. Click CANCEL if you do not."
   );
+  if (!upper === false) {
+  }
 
   // This is the button in regards to lower-case. This also defines the parameters.
   var lower = confirm(
@@ -200,6 +202,21 @@ function generatePassword() {
   for (var i = 0; i < entry; i++) {
     password += randomSpecialCharacters;
   }
+
+  var possibleChars = [];
+  var combinedArr = possibleChars.concat(
+    UPPER_CASES,
+    LOWER_CASES,
+    NUMBERS,
+    SPECIAL_CHARACTERS
+  );
+  console.log(combinedArr);
+
+  //TODO: find a way to include "true" arrays IN COMBINED ARRAY - - use if logic
+  //TODO: combine above arrays into single array - - inside if statements
+  //TODO: create for loop that loops only as many times as requested password length - - include random character logic to pull from combined array
+  //TODO: every time loop runs, grab random character from combined array. - - can make them into array then remove space in the array to be a password.
+  //TODO: after character grabbed, add to generate password - then return password
 
   // function random(
   //   randomUpperCase,
