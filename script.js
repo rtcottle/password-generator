@@ -64,8 +64,8 @@ var UPPER_CASES = [
   "Y",
   "Z",
 ];
-var randomUpperCase =
-  UPPER_CASES[Math.floor(Math.random() * UPPER_CASES.length - 1)]; //randomize above var
+// var randomUpperCase =
+//   UPPER_CASES[Math.floor(Math.random() * UPPER_CASES.length - 1)]; //randomize above var
 var LOWER_CASES = [
   "a",
   "b",
@@ -94,10 +94,10 @@ var LOWER_CASES = [
   "y",
   "z",
 ];
-var randomLowerCase =
-  LOWER_CASES[Math.floor(Math.random() * LOWER_CASES.length)]; //randomize above var
+// var randomLowerCase =
+//   LOWER_CASES[Math.floor(Math.random() * LOWER_CASES.length)]; //randomize above var
 var NUMBERS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var randomNumbers = NUMBERS[Math.floor(Math.random() * NUMBERS.length)]; //randomize above var
+// var randomNumbers = NUMBERS[Math.floor(Math.random() * NUMBERS.length)]; //randomize above var
 var SPECIAL_CHARACTERS = [
   "!",
   "@",
@@ -118,8 +118,8 @@ var SPECIAL_CHARACTERS = [
   ":",
   "~",
 ];
-var randomSpecialCharacters =
-  SPECIAL_CHARACTERS[Math.floor(Math.random() * SPECIAL_CHARACTERS.length)]; //randomize above var
+// var randomSpecialCharacters =
+//   SPECIAL_CHARACTERS[Math.floor(Math.random() * SPECIAL_CHARACTERS.length)]; //randomize above var
 
 function generatePassword() {
   var entry = Number(
@@ -190,18 +190,18 @@ function generatePassword() {
   var password = "";
 
   //creates single character for each loop type.
-  for (var i = 0; i < entry; i++) {
-    password += randomUpperCase;
-  }
-  for (var i = 0; i < entry; i++) {
-    password += randomLowerCase;
-  }
-  for (var i = 0; i < entry; i++) {
-    password += randomNumbers;
-  }
-  for (var i = 0; i < entry; i++) {
-    password += randomSpecialCharacters;
-  }
+  // for (var i = 0; i < entry; i++) {
+  //   password += randomUpperCase;
+  // }
+  // for (var i = 0; i < entry; i++) {
+  //   password += randomLowerCase;
+  // }
+  // for (var i = 0; i < entry; i++) {
+  //   password += randomNumbers;
+  // }
+  // for (var i = 0; i < entry; i++) {
+  //   password += randomSpecialCharacters;
+  // }
 
   var possibleChars = [];
   var combinedArr = possibleChars.concat(
@@ -211,6 +211,9 @@ function generatePassword() {
     SPECIAL_CHARACTERS
   );
   console.log(combinedArr);
+  for (var i = 0; i < entry; i++) {
+    password = combinedArr[Math.floor(Math.random() * entry)];
+  } //entire array random character times the entry value.
 
   //TODO: find a way to include "true" arrays IN COMBINED ARRAY - - use if logic
   //TODO: combine above arrays into single array - - inside if statements
