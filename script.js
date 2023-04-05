@@ -121,7 +121,7 @@ var SPECIAL_CHARACTERS = [
 // var randomSpecialCharacters =
 //   SPECIAL_CHARACTERS[Math.floor(Math.random() * SPECIAL_CHARACTERS.length)]; //randomize above var
 
-function generatePassword() {
+function generatePassword(number) {
   var entry = Number(
     prompt(
       'How many characters would you like your password to contain?',
@@ -221,19 +221,14 @@ function generatePassword() {
   possibleChars.concat();
   console.log('after logic', possibleChars);
 
-  var combinedArr = possibleChars.concat(
-    UPPER_CASES,
-    LOWER_CASES,
-    NUMBERS,
-    SPECIAL_CHARACTERS
-  );
-  console.log(combinedArr);
+  var combinedArr = possibleChars.join();
+  console.log('combined array', combinedArr);
   for (var i = 0; i < entry; i++) {
-    password = combinedArr[Math.floor(Math.random() * entry)];
+    combinedArr[Math.floor(Math.random(number))];
+
+    password = combinedArr;
   } //entire array random character times the entry value.
 
-  //TODO: find a way to include "true" arrays IN COMBINED ARRAY - - use if logic
-  //TODO: combine above arrays into single array - - inside if statements
   //TODO: create for loop that loops only as many times as requested password length - - include random character logic to pull from combined array
   //TODO: every time loop runs, grab random character from combined array. - - can make them into array then remove space in the array to be a password.
   //TODO: after character grabbed, add to generate password - then return password
