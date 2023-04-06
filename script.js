@@ -183,15 +183,18 @@ function generatePassword(entry, upper, lower, number, special) {
   if (special != false) {
     possibleChars.push(SPECIAL_CHARACTERS);
   }
-  console.log('after logic', possibleChars);
+  // console.log('after logic', possibleChars);
 
-  var combinedArr = possibleChars.join();
+  var combinedArr = possibleChars.flat(1);
   console.log('combined array', combinedArr);
-  for (var i = 0; i < charNumber; i++) {
-    const passwordChars = possibleChars[Math.floor(Math.random() * charNumber)];
-    return console.log(passwordChars);
-  } //entire array random character times the entry value.
 
+  function randomCharacters(combinedArr) {
+    for (var i = 0; i < charNumber; i++) {
+      const passwordChars = combinedArr[Math.floor(Math.random() * charNumber)];
+      return (password = passwordChars);
+    } //entire array random character times the entry value.
+  }
+  randomCharacters();
   //TODO: create for loop that loops only as many times as requested password length - - include random character logic to pull from combined array
   //TODO: every time loop runs, grab random character from combined array. - - can make them into array then remove space in the array to be a password.
   //TODO: after character grabbed, add to generate password - then return password
