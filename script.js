@@ -32,10 +32,6 @@ generateBtn.addEventListener('click', writePassword);
 // 7. each "true" character type is present
 // loop each type of character that was selected.
 
-// TODO: define password length (n) and how each var works inside the password variable.
-// var output = [upper + lower + number + special]
-// output is the entry value which includes the upper, lower, number, and special options set as true.
-
 var UPPER_CASES = [
   'A',
   'B',
@@ -64,8 +60,6 @@ var UPPER_CASES = [
   'Y',
   'Z',
 ];
-// var randomUpperCase =
-//   UPPER_CASES[Math.floor(Math.random() * UPPER_CASES.length - 1)]; //randomize above var
 var LOWER_CASES = [
   'a',
   'b',
@@ -94,10 +88,7 @@ var LOWER_CASES = [
   'y',
   'z',
 ];
-// var randomLowerCase =
-//   LOWER_CASES[Math.floor(Math.random() * LOWER_CASES.length)]; //randomize above var
 var NUMBERS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-// var randomNumbers = NUMBERS[Math.floor(Math.random() * NUMBERS.length)]; //randomize above var
 var SPECIAL_CHARACTERS = [
   '!',
   '@',
@@ -118,26 +109,14 @@ var SPECIAL_CHARACTERS = [
   ':',
   '~',
 ];
-// var randomSpecialCharacters =
-//   SPECIAL_CHARACTERS[Math.floor(Math.random() * SPECIAL_CHARACTERS.length)]; //randomize above var
 
-function generatePassword(number) {
+function generatePassword(entry, upper, lower, number, special) {
   var entry = Number(
     prompt(
       'How many characters would you like your password to contain?',
       'Please choose from 8-128 characters'
     )
   );
-  // TODO: fix this. When they click cancel gives prompt.
-  // TODO: fix so console.log displays user number with these rules
-  // if (entry === false){
-  //   alert("Please enter a number")
-  //   return;
-  // }
-  // if (isNaN(entry)) {
-  //   alert("Not a number");
-  //   return;
-  // }
   if (entry < 8) {
     alert('Must be more 7 characters');
     return;
@@ -188,20 +167,7 @@ function generatePassword(number) {
 
   var password = '';
 
-  //creates single character for each loop type.
-  // for (var i = 0; i < entry; i++) {
-  //   password += randomUpperCase;
-  // }
-  // for (var i = 0; i < entry; i++) {
-  //   password += randomLowerCase;
-  // }
-  // for (var i = 0; i < entry; i++) {
-  //   password += randomNumbers;
-  // }
-  // for (var i = 0; i < entry; i++) {
-  //   password += randomSpecialCharacters;
-  // }
-
+  const charNumber = Number(entry);
   var possibleChars = [];
 
   // logic to either include or exclude characters.
@@ -217,55 +183,18 @@ function generatePassword(number) {
   if (special != false) {
     possibleChars.push(SPECIAL_CHARACTERS);
   }
-
-  possibleChars.concat();
   console.log('after logic', possibleChars);
 
   var combinedArr = possibleChars.join();
   console.log('combined array', combinedArr);
-  for (var i = 0; i < entry; i++) {
-    combinedArr[Math.floor(Math.random(number))];
-
-    password = combinedArr;
+  for (var i = 0; i < charNumber; i++) {
+    const passwordChars = possibleChars[Math.floor(Math.random() * charNumber)];
+    return console.log(passwordChars);
   } //entire array random character times the entry value.
 
   //TODO: create for loop that loops only as many times as requested password length - - include random character logic to pull from combined array
   //TODO: every time loop runs, grab random character from combined array. - - can make them into array then remove space in the array to be a password.
   //TODO: after character grabbed, add to generate password - then return password
 
-  // function random(
-  //   randomUpperCase,
-  //   randomLowerCase,
-  //   randomNumbers,
-  //   randomSpecialCharacters
-  // ) {
-  //   if (upper === true) {
-  //     for (var i = 0; i < randomUpperCase.length; i++) {
-  //       var randomUpperCase = randomUpperCase[i];
-  //     }
-  //   }
-  //   if (lower === true) {
-  //     for (var j = 0; j < randomLowerCase.length; j++) {
-  //       var randomLowerCase = randomLowerCase[j];
-  //     }
-  //   }
-  //   if (number === true) {
-  //     for (var k = 0; k < randomNumbers.length; k++) {
-  //       var randomNumbers = randomNumbers[k];
-  //     }
-  //   }
-  //   if (special === true) {
-  //     for (var l = 0; l < randomSpecialCharacters.length; l++) {
-  //       var randomSpecialCharacters = randomSpecialCharacters[l];
-  //     }
-  //   }
-
-  // return random(
-  //   randomUpperCase,
-  //   randomLowerCase,
-  //   randomNumbers,
-  //   randomSpecialCharacters
-  // );
-  // }
   return password;
 }
