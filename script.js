@@ -184,7 +184,7 @@ function generatePassword(entry, upper, lower, number, special) {
   // console.log('after logic', possibleChars);
 
   // make the nested arrays into one array
-  var combinedArr = possibleChars.flat(1);
+  var combinedArr = possibleChars.flat(1).join('');
   console.log('combined array', combinedArr);
 
   function randomCharacters(combinedArr) {
@@ -201,7 +201,7 @@ function generatePassword(entry, upper, lower, number, special) {
     for (var i = 0; i < letter; i++) {
       arr.push(i);
     }
-    return (password = arr.join(''));
+    return (password = arr);
   }
 
   randomCharacters(combinedArr);
