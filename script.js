@@ -158,14 +158,12 @@ function generatePassword(entry, upper, lower, number, special) {
     alert('You must select a character type');
     return;
   }
-
-  console.log(Number(entry));
-  console.log('upper case:', upper);
-  console.log('lower case:', lower);
-  console.log('numbers:', number);
-  console.log('specials:', special);
-
-  var password = '';
+  // confirming all selections from user
+  // console.log(Number(entry));
+  // console.log('upper case:', upper);
+  // console.log('lower case:', lower);
+  // console.log('numbers:', number);
+  // console.log('specials:', special);
 
   const charNumber = Number(entry);
   var possibleChars = [];
@@ -185,16 +183,31 @@ function generatePassword(entry, upper, lower, number, special) {
   }
   // console.log('after logic', possibleChars);
 
+  // make the nested arrays into one array
   var combinedArr = possibleChars.flat(1);
-  console.log('combined array', combinedArr);
+  // console.log('combined array', combinedArr);
 
   function randomCharacters(combinedArr) {
     for (var i = 0; i < charNumber; i++) {
+      // const shuffled = combinedArr.sort(() => 0.5 - Math.random());
+      // let selected = shuffled.slice(0, charNumber);
+      // const password = [];
       const passwordChars = combinedArr[Math.floor(Math.random() * charNumber)];
-      return (password = passwordChars);
+      // password.push(i);
+      return passwordChars;
     } //entire array random character times the entry value.
+    newArray(passwordChars);
   }
-  randomCharacters();
+
+  function newArray(letter) {
+    const arr = [];
+    for (var i = 0; i < letter; i++) {
+      arr.push(i);
+    }
+    return (password = arr.join(''));
+  }
+
+  randomCharacters(combinedArr);
   //TODO: create for loop that loops only as many times as requested password length - - include random character logic to pull from combined array
   //TODO: every time loop runs, grab random character from combined array. - - can make them into array then remove space in the array to be a password.
   //TODO: after character grabbed, add to generate password - then return password
