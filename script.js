@@ -198,9 +198,7 @@ function generatePassword(entry, upper, lower, number, special) {
 
   function newArray(letter) {
     const arr = [];
-    for (var i = 0; i < letter; i++) {
-      arr.push(i);
-    }
+    arr.push(letter);
     return (password = arr);
   }
 
