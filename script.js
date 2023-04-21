@@ -184,28 +184,27 @@ function generatePassword(entry, upper, lower, number, special) {
   // console.log('after logic', possibleChars);
 
   // make the nested arrays into one array
-  var combinedArr = possibleChars.flat(1).join('');
+  var combinedArr = possibleChars.flat(1);
   console.log('combined array', combinedArr);
 
+  // select random character from the combined array above.
   function randomCharacters(combinedArr) {
     for (var i = 0, n = combinedArr.length; i < charNumber; i++) {
       const passwordChars = combinedArr[Math.floor(Math.random() * n)];
-      // password.push(i);
+      newArray(passwordChars);
       return passwordChars;
     } //entire array random character times the entry value.
-    newArray(passwordChars);
   }
-
+  // save the character in a new array
   function newArray(letter) {
+    console.log('letter', letter);
     const arr = [];
+    console.log('final array', arr);
     arr.push(letter);
-    return (password = arr);
+    return (password = arr.join(''));
   }
 
   randomCharacters(combinedArr);
-  //TODO: create for loop that loops only as many times as requested password length - - include random character logic to pull from combined array
-  //TODO: every time loop runs, grab random character from combined array. - - can make them into array then remove space in the array to be a password.
-  //TODO: after character grabbed, add to generate password - then return password
 
   return password;
 }
